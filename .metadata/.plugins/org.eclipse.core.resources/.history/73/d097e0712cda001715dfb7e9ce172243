@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int caseNum = sc.nextInt();
+		int H, W, N;
+
+		for (int i = 0; i < caseNum; i++) {
+			H = sc.nextInt();
+			W = sc.nextInt();
+			// N = sc.nextInt();
+
+			for (N = 1; N < 100; N++) {
+				System.out.print(N % H);
+
+				if (N / H > 8)
+					System.out.println(((N / H) + 1));
+				else
+					System.out.println("0" + ((N / H) + 1));
+			}
+		}
+
+		sc.close();
+	}
+}

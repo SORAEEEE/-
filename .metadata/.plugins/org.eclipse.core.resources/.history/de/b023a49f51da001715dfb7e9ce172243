@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		int caseNum = sc.nextInt();
+		int M, N, x, y;
+		int max;
+		int Mnum, Nnum;
+		
+		for (int i = 0; i < caseNum; i++) {
+			M = sc.nextInt();
+			N = sc.nextInt();
+			x = sc.nextInt();
+			y = sc.nextInt();
+
+			max = M
+			Mnum = 0; Nnum=0;
+			
+			
+		}
+
+		sc.close();
+	}
+}

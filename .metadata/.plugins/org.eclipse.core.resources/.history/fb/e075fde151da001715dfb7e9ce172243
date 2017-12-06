@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		int caseNum = sc.nextInt();
+		int M, N, x, y;
+		int max;
+		int k;
+
+		for (int i = 0; i < caseNum; i++) {
+			M = sc.nextInt();
+			N = sc.nextInt();
+			x = sc.nextInt();
+			y = sc.nextInt();
+
+			max = M*N;
+			k = x;
+			
+			do{
+				if(k % N == y)
+					break;
+				
+				k+=M;
+			}while(k<max);
+			
+			System.out.println(k);
+		}
+
+		sc.close();
+	}
+}
