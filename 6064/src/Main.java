@@ -15,15 +15,14 @@ public class Main {
 			x = sc.nextInt();
 			y = sc.nextInt();
 
-			max = M * N / gcd(M, N);
-			k = x;
-
-			do {
-				if (k % N == y || k % N == 0)
+			//if(y == N) y = 0;
+			max = M * N;
+			
+			for (k = x; k <= max; k += M) {
+				//System.out.println(k + " " + N + " " + k%N);
+				if ((k-1) % N == (y-1))
 					break;
-
-				k += M;
-			} while (k < max);
+			}
 
 			if (k > max)
 				System.out.println("-1");
@@ -32,14 +31,5 @@ public class Main {
 		}
 
 		sc.close();
-	}
-
-	public static int gcd(int a, int b) {
-		if (a < b)
-			return gcd(b, a);
-		else if (a % b == 0)
-			return b;
-		else
-			return gcd(b, a % b);
 	}
 }
