@@ -50,6 +50,7 @@ public class Main {
 			if (count > manyCount) {
 				manyCount = count;
 				manyVal[0] = arr[i];
+				manyVal[1] = arr[arr.length - 1];
 				flag = false;
 			} else if (count == manyCount) {
 				flag = true;
@@ -66,5 +67,4 @@ public class Main {
 			return manyVal[1];
 		return manyVal[0];
 	}
-
 }
