@@ -57,6 +57,7 @@ public class Main {
 				} else {
 					manyVal[1] = arr[i];
 				}
+
 			}
 
 			i = j; // 이미본거 넘어가기

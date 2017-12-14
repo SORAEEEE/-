@@ -30,7 +30,7 @@ public class Main {
 
 	static int findMany(int[] arr) {
 		int manyCount = 0; // 최빈값 개수
-		int[] manyVal = { arr[0], arr[arr.length - 1] }; // 최빈값
+		int[] manyVal = { arr[0], arr[arr.length-1] }; // 최빈값
 		boolean flag = false; // 같은게 있으면 true
 
 		for (int i = 0; i < arr.length; i++) {
@@ -53,10 +53,17 @@ public class Main {
 				flag = false;
 			} else if (count == manyCount) {
 				flag = true;
-				if (manyVal[1] < arr[i]) {
-				} else {
+				if (manyVal[0] > arr[i]) {
+					manyVal[1] = manyVal[0];
+					manyVal[0] = arr[i];
+				}
+				else if(manyVal[1]<arr[i]){
+					
+				}
+				else {
 					manyVal[1] = arr[i];
 				}
+
 			}
 
 			i = j; // 이미본거 넘어가기
@@ -66,5 +73,6 @@ public class Main {
 			return manyVal[1];
 		return manyVal[0];
 	}
+
 
 }
