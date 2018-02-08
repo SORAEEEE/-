@@ -20,7 +20,7 @@ public class Main {
 				// 없을 경우에는 -1 출력
 				System.out.println(queue[front]);
 
-				if (queue[front] == -1) { 
+				if (queue[front] == -1) {
 				} else {
 					queue[front] = -1;
 					front++;
