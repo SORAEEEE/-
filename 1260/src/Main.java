@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
-//import java.util.Stack;
+import java.util.Stack;
 
 public class Main {
 	static ArrayList<Integer>[] adj;
@@ -30,17 +30,20 @@ public class Main {
 			adj[v].add(u);
 		}
 
-		for (int i = 1; i <= N; i++)
-			Collections.sort(adj[i]);
-
 		visit = new boolean[N + 1];
-		Arrays.fill(visit, false);
 
+		Arrays.fill(visit, false);
+		for (int i = 1; i <= N; i++)
+			Collections.reverse(adj[i]);
 		DFS(V);
 		System.out.println();
+
 		Arrays.fill(visit, false);
+		for (int i = 1; i <= N; i++)
+			Collections.sort(adj[i]);
 		BFS(V);
 		System.out.println();
+
 		sc.close();
 	}
 
